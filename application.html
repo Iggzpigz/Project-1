@@ -22,24 +22,23 @@
         <form id="Application" method="post" action="https://mercury.swin.edu.au/it000000/cos10005/surveytest.php">
             <label>Job Reference Number</label><br>
                 <select>
-                    <option>Cloud Architect</option>
-                    <option>Cloud Administrator</option>
-                    <option>Cloud Systems Engineer</option>
-                    <option>Cloud Data Engineer</option>
-                    <option>Cloud Network Engineer</option>
+                    <option name="Cloud_Engineer" value="1">Cloud Engineer</option>
+                    <option name="Software_Developer" value="2">Software Developer</option>
+                    <option name="Client-side_Developer" value="3">Client-side Developer</option>
+                    <option name="Computer_Systems_Specialist" value="4">Computer Systems Specialist</option>
                 </select>
             <br><label>First Name</label>
                 <input type="text" name="fname" size="20">
             <br><label>Last Name</label>
-                <input type="text" name="fname" size="20">
+                <input type="text" name="lname" size="20">
             <br><label>Date of Birth</label>
                 <input type="date">
             <br><label>Gender</label><br>
-                <label>Male</label>
+                <label>Male: </label>
                     <input type="radio" name="Gender" value="1">
-                <label>Female</label>
+                <label>Female: </label>
                     <input type="radio" name="Gender" value="2">
-                <label>Other</label>
+                <label>Other: </label>
                     <input type="radio" name="Gender" value="3">
             <br><label>Street Address</label>
                 <input type="text" name="Street" maxlength="40">
@@ -47,14 +46,14 @@
                 <input type="text" name="Suburb" maxlength="40">
             <br><label>State</label>
                 <select>
-                    <option>Vic</option>
-                    <option>NSW</option>
-                    <option>QLD</option>
-                    <option>NT</option>
-                    <option>WA</option>
-                    <option>SA</option>
-                    <option>TAS</option>
-                    <option>ACT</option>
+                    <option name="vic" value="1">Vic</option>
+                    <option name="nsw" value="2">NSW</option>
+                    <option name="qld" value="3">QLD</option>
+                    <option name="nt" value="4">NT</option>
+                    <option name="wa" value="5">WA</option>
+                    <option name="sa" value="6">SA</option>
+                    <option name="tas" value="7">TAS</option>
+                    <option name="act" value="8">ACT</option>
                 </select>
             <br><label>Postcode</label>
                 <input type="number" minlength="4" maxlength="4">
@@ -64,13 +63,13 @@
                 <input type="number" minlength="8" maxlength="12">
             <br><label>Required Technical list </label>
                 <br><label></label>
-                    <input type="checkbox">
+                    <input type="checkbox" name="a" value="1">
                 <br><label></label>
-                    <input type="checkbox">
+                    <input type="checkbox" name="s" value="2">
                 <br><label></label>
-                    <input type="checkbox">
+                    <input type="checkbox" name="d" value="3">
                 <br><label></label>
-                    <input type="checkbox">
+                    <input type="checkbox" name="f" value="4">
             <br><textarea name="Other Skills"></textarea><br>
             <input type="submit" value="Submit Application" >
             <input type="reset" value="Reset Page" >
