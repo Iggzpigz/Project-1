@@ -1,13 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- 2 job positions: position 1 = cloud engineer ; position 2 = tbd -->
 <head>
-<title></title>
-<meta charset="utf-8">
-<meta name="description" content="Jobs description">
-<meta name="keywords" content="HTML and CSS">
-<meta name="author" content="Jacob, Tom, Pahul, Hung">
-<link href="styles" rel="stylesheet">
+    <title>Available jobs for you at [insert company name]</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Jobs Description">
+    <meta name="keywords" content="HTML and CSS">
+    <meta name="author" content="Tom">
+    
+    <!-- External CSS files -->
+    <link href="styles/styles.css" rel="stylesheet"> <!-- link this to styles.css later -->
 </head>
+
 <body>
+    <header>
+        <h1><strong>JOB DESCRIPTIONS</strong></h1>
+    </header>
+
+    <section class="availjobs">
+        <h2 id="avail">Available jobs:</h2>
+        <nav>
+            <ul>
+                <li><p class="jobsmenu"><a href="#cloudengineer">Cloud Engineer</a></p></li>
+                <li><p class="jobsmenu"><a href="#tbd">TBD</a></p></li>
+                <li><p class="homepage-back"><a href="#salary">Return to Homepage</a></p></li>
+            </ul>
+        </nav>
+    </section>
+
+    <aside role="region" class="infobox">
+        <h2 class="infobox-title secondary-background" id="cloudengineer">Cloud Engineer</h2>
+        <section class="table-section">
+            <div class="table-content">
+                <figure class="table-image" data-source="image">
+                    <a href="styles/images/cloud-engi.png" title id="cloud-engi-img">
+                        <!-- image from https://bestarion.com/devops-engineer-vs-cloud-engineer/ -->
+                        <img src="styles/images/cloud-engi.png" alt width="270" height="416">
+                    </a>
+                    <figcaption class="engi-img-caption">
+                        cloud engineer brief description here
+                    </figcaption>
+                </figure>
+                <section class="gen-table-border-color">
+                    <div class="table-border-generation gen-table-spacing-updown gen-table-spacing-leftright gen-table-border-color">
+                        <h3 class="table-font data-label">SALARY</h3>
+                        <div class="table-info-value info-font-size salary-padding">
+                            Annually:
+                            <br>
+                            <p>110,000 - 130,000</p>
+                        </div>
+                    </div>
+                    <div class="table-border-generation gen-table-spacing-updown gen-table-spacing-leftright gen-table-border-color">
+                        <h3 class="table-font data-label">REFERENCE NUMBER</h3>
+                        <div class="table-info-value info-font-size ref-num-padding">
+                            5 alphanumeric char
+                            <br>
+                            <p>here</p>
+                        </div>
+                    </div>
+                    <div class="table-border-generation gen-table-spacing-updown gen-table-spacing-leftright gen-table-border-color">
+                        <h3 class="table-font data-label">POSITION TITLE</h3>
+                        <div class="table-info-value info-font-size pos-title-padding">
+                            Junior Cloud Engineer
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </aside>
+
+<div>
+    <h3 id="bad-rhetorical-q-JCE"><strong>What is a Junior Cloud Engineer?</strong></h3>
+</div>
+
 </body>
+
 </html>
+
+<!-- SECOND JOB SOFTWARE DEVELOPER -->
