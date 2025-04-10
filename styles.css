@@ -166,11 +166,12 @@ header {
   color: inherit;
 }
 .quick-link-card {
-  height: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    background-color: #F8F9FA;
 }
 .quick-link-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -183,7 +184,7 @@ header {
   font-weight: 600;
 }
 .quick-link-content {
-  background-color: #f9f9f9;
+  background-color: #F8F9FA;
   padding: 20px;
   display: flex;
   align-items: flex-start;
@@ -204,10 +205,12 @@ header {
 }
 
 .quick-link-icon img {
-  width: 60%;
-  height: 60%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  filter: brightness(1) invert(0);
 }
+
 .quick-link-text {
   font-size: 0.95rem;
   color: #026473;
@@ -223,7 +226,7 @@ header {
   background-color: white;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
@@ -271,7 +274,7 @@ footer {
 .footer-links ul li a {
   color: #026473;
   font-size: 0.9rem;
-    transition: color 0.3s;
+  transition: color 0.3s;
 }
 .footer-links ul li a:hover {
   color: #F76F3F;
