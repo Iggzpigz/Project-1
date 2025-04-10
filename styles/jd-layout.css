@@ -180,3 +180,58 @@ ul {
     display:inline;
     text-align: center;
 }
+
+.headlines {
+    border-bottom: 2.25px solid darkgray;
+    padding: 6px;
+    font-size: 18px;
+    overflow: auto;
+}
+
+.bottom-spacing {margin-bottom: 30px;}
+
+.fieldset-byeborder {border: none;}
+
+.description-wrap {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.job-desc-engi-spacing {
+    padding: 0px 24px 0px;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    background:white;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    transition: all 0.3s ease;
+}
+
+.on-hover:hover {
+    border: 1px solid #035096;
+    box-shadow: 0 0 9px 0 rgba(67, 133, 224, 0.3);
+    outline: none;
+}
+
+.text-yap-group {
+    padding-right: 40px;
+    width: 100%;
+}
+
+.text-box {
+    position: relative;
+    overflow: visible;
+}
+
+.desc-text-wall {
+    position: relative;
+    overflow: auto;
+    margin: 0px;
+    min-height: 80px;
+    outline: none;
+    white-space: normal;
+    font-size: 15px;
+    line-height: 1.6em;
+}
