@@ -2,12 +2,70 @@
 filename: project1
 author: tom chu
 created: 8/4/25
-last modified: 11/4/25
+last modified: 12/4/25
 description: job description page layout
 */
 
 h1, h2, h3 {font-family: Verdana, sans-serif;}
 #avail {color: limegreen}
+
+/*
+this part is for styling the code fragment that was taken from home.html
+*/
+header {
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .logo-container img {
+    height: auto;
+    width: 180px;
+    display: block;
+  }
+
+  .main-nav ul {
+    display: flex;
+  }
+
+  .main-nav ul li {
+    margin-left: 2rem;
+  }
+
+  .main-nav ul li a {
+    color: #026473;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+
+  .main-nav ul li a:hover {
+    color: #F76F3F;
+  }
+  
+/*
+end of header styling
+*/
 
 .jobsmenu {
     display:inline-block;
@@ -33,12 +91,13 @@ h1, h2, h3 {font-family: Verdana, sans-serif;}
     background-color: coral;
 }
 
-header {
+.title-header {
     border: 1px inset darkgray;
     margin: 0.5em;
     padding: 0.5em;
-    background-color:lightgray;
+    background-color:#528F99;
     text-align: center;
+    color:white;
 }
 
 .availjobs:hover {display:block;}
@@ -96,9 +155,12 @@ aside {
 
 .table-image {
     text-align: center;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
-ul {
+nav ul {
     list-style-type: none;
     list-style: none;
     padding-left: 0;
@@ -120,6 +182,7 @@ ul {
     font-size: 14px;
     font-style: italic;
     text-align: center;
+    padding: 10px;
 }
 
 .gen-table-spacing-updown {
@@ -207,7 +270,7 @@ ul {
     justify-content: flex-end;
     flex-direction: row;
     transition: all 0.3s ease;
-}
+}   
 
 .on-hover:hover {
     border: 1px solid #035096;
@@ -235,3 +298,13 @@ ul {
     font-size: 15px;
     line-height: 1.6em;
 }
+
+.desc-mini-title {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #5a616d;
+}
+
+.resp-list {list-style-type: disc;}
+
