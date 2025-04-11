@@ -1,0 +1,237 @@
+/*
+filename: project1
+author: tom chu
+created: 8/4/25
+last modified: 11/4/25
+description: job description page layout
+*/
+
+h1, h2, h3 {font-family: Verdana, sans-serif;}
+#avail {color: limegreen}
+
+.jobsmenu {
+    display:inline-block;
+    text-decoration: none;
+    padding:0.2em 0.6em;
+    border: 4px solid #ccc;
+}
+
+.jobsmenu:hover {
+    border-color: darkblue;
+    background-color: lightblue;
+}
+
+.homepage-back {
+    display:inline-block;
+    text-decoration: none;
+    padding:0.2em 0.6em;
+    border: 4px solid #ccc;
+}
+
+.homepage-back:hover {
+    border-color: red;
+    background-color: coral;
+}
+
+header {
+    border: 1px inset darkgray;
+    margin: 0.5em;
+    padding: 0.5em;
+    background-color:lightgray;
+    text-align: center;
+}
+
+.availjobs:hover {display:block;}
+.availjobs {
+    font-size: 95%;
+    border: 4px inset black;
+    border-radius: 14px;
+    margin: 0.5em;
+    padding: 1em;
+    width: 96%;
+    float: left;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    text-align: center;
+}
+
+aside {
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    clear: left;
+    float: left;
+    margin: 0 0 18px 18px;
+    width: 270px;
+}
+
+.secondary-background {
+    color:white;
+    background-color: darkgray;
+}
+
+.infobox {
+    background-color:white;
+}
+
+.infobox-title {
+    font-size: 18px;
+    line-height: 1.25;
+    padding: 12px 9px;
+    text-align: center;
+}
+
+.gen-table-border-color {
+    border-color: lightgray;
+}
+
+.table-section {
+    overflow:hidden;
+    border-color: lightgray;
+}
+
+.table-content {
+    display:block;
+}
+
+.table-image {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    list-style: none;
+    padding-left: 0;
+}
+
+
+#cloud-engi-img {
+    display:inline-block;
+    position: relative;
+    vertical-align: bottom;
+    overflow: hidden;
+    text-align: center;
+    pointer-events: none;
+    cursor: default;
+}
+
+.engi-img-caption {
+    color:rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+}
+
+.gen-table-spacing-updown {
+    padding-bottom: 9px;
+    padding-top: 9px;
+}
+
+.gen-table-spacing-leftright {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.table-font {
+    font-size: 14px;
+    line-height: 1.25;
+    margin-top: 0;
+}
+
+.salary-padding {
+    padding-top: 6px;
+}
+
+.ref-num-padding {
+    padding-top: 20px;
+}
+
+.pos-title-padding {
+    padding-top: 15px;
+}
+
+.table-info-value {
+    line-height: 0;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+.table-info-value:not(:first-child) {
+    flex-basis: 180px;
+}
+
+.info-font-size {
+    font-size: 14px;
+}
+
+.table-border-generation {
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    grid-column-gap: 9px;
+    overflow: hidden;
+}
+
+#bad-rhetorical-q-JCE {
+    border: 4px solid darkgray;
+    padding: 0.5em;
+    display:inline;
+    text-align: center;
+}
+
+.headlines {
+    border-bottom: 2.25px solid darkgray;
+    padding: 6px;
+    font-size: 18px;
+    overflow: auto;
+}
+
+.bottom-spacing {margin-bottom: 30px;}
+
+.fieldset-byeborder {border: none;}
+
+.description-wrap {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.job-desc-engi-spacing {
+    padding: 0px 24px 0px;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    background:white;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    transition: all 0.3s ease;
+}
+
+.on-hover:hover {
+    border: 1px solid #035096;
+    box-shadow: 0 0 9px 0 rgba(67, 133, 224, 0.3);
+    outline: none;
+}
+
+.text-yap-group {
+    padding-right: 40px;
+    width: 100%;
+}
+
+.text-box {
+    position: relative;
+    overflow: visible;
+}
+
+.desc-text-wall {
+    position: relative;
+    overflow: auto;
+    margin: 0px;
+    min-height: 80px;
+    outline: none;
+    white-space: normal;
+    font-size: 15px;
+    line-height: 1.6em;
+}
