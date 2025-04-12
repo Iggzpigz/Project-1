@@ -1,0 +1,343 @@
+
+/* 
+author: [Hung Khanh Pham]
+created: [9 April 25]
+last modified: [11 April 25]
+description: [html files it refers to home.html]
+*/
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body {
+    background-color: white;
+    color: #026473;
+    line-height: 1.6;
+  }
+  a {
+    text-decoration: none;
+    color: #026473;
+  }
+  ul {
+    list-style: none;
+  }
+  
+  /* Container wrappers */
+  .header-wrapper,
+  .banner-wrapper,
+  .content-wrapper {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Logo styles */
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  .logo-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .logo-container img {
+    height: auto;
+    width: 180px;
+    display: block;
+  }
+  
+  /* Navigation styles */
+  .main-nav ul {
+    display: flex;
+  }
+  .main-nav ul li {
+    margin-left: 2rem;
+  }
+  .main-nav ul li a {
+    color: #026473;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  .main-nav ul li a:hover {
+    color: #F76F3F;
+  }
+  
+  /* Banner section */
+  .banner {
+    background-color: #528F99;
+    color: white;
+    padding: 4rem 0;
+    margin-top: 1rem;
+  }
+  .banner h1 {
+    font-size: 3.5rem; 
+    color: #DAEFE6; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Job card styles */
+  .job-card {
+    margin-top: -2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 10;
+  }
+  .card-content {
+    display: flex;
+    background-color: #F7F6F3; 
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  .job-content {
+    flex: 3;
+    padding-right: 2rem;
+  }
+  .job-illustration {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .job-illustration img {
+    max-width: 150%;
+    max-height: 150%; 
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  .job-card h2 {
+    color: #026473;
+    margin-bottom: 1.5rem;
+  }
+  .job-card h3 {
+    color: #026473;
+    margin: 1.5rem 0 0.5rem;
+  }
+  .job-card p {
+    margin-bottom: 1rem;
+  }
+  .job-card ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .job-card li {
+    margin-bottom: 0.5rem;
+  }
+  .quick-links-container {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .quick-link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .quick-link-card-wrapper {
+    flex: 1;
+    min-width: 300px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .quick-link-card {
+      height: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+      background-color: #F8F9FA;
+  }
+  .quick-link-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  .quick-link-header {
+    background-color: #528F99;
+    color: white;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .quick-link-content {
+    background-color: #F8F9FA;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  /* logo containers */
+  .quick-link-icon {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    background-color: #528F99;
+    border-radius: 8px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .quick-link-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(1) invert(0);
+  }
+  
+  .quick-link-text {
+    font-size: 0.95rem;
+    color: #026473;
+    margin: 0;
+  }
+  
+  /* Services grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 3rem;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  /* Info cards */
+  .info-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 3rem;
+  }
+  .info-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .info-card h3 {
+    margin-bottom: 15px;
+    color: #026473;
+  }
+  .info-card p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+  
+  /* Footer kept */
+  footer {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    margin-top: 2rem;
+  }
+  .footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .footer-links ul {
+    display: flex;
+  }
+  .footer-links ul li {
+    margin: 0 15px;
+  }
+  .footer-links ul li a {
+    color: #026473;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+  }
+  .footer-links ul li a:hover {
+    color: #F76F3F;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 1024px) {
+    .card-content {
+        flex-direction: column;
+    }
+    
+    .job-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .job-illustration img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header-wrapper {
+        flex-direction: column;
+    }
+    .logo-container {
+        margin-bottom: 1rem;
+    }
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-nav ul li {
+        margin: 0.5rem 1rem;
+    }
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+    .quick-link-row {
+        flex-direction: column;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 480px) {
+    .banner h1 {
+        font-size: 2rem;
+    }
+    .quick-link-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .quick-link-icon {
+        margin: 0 0 15px 0;
+    }
+    .quick-link-text {
+        text-align: center;
+    }
+  }
