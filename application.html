@@ -5,32 +5,35 @@
 <meta charset="utf-8">
 <meta name="description" content="Job Application Form">
 <meta name="keywords" content="HTML and CSS">
-<meta name="author" content="Jacob, Tom, Pahul, Hung">
+<meta name="author" content="Jacob">
 <link href="styles.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Job Application</h1>
+        <!-- This part was taken from home.html to match the header of that page -->
+        <div class="header-wrapper">
+            <div class="logo-container">
+                <a href="home.html">
+                    <img src="styles/images/bluewave_it_logo.png" alt="Bluewave IT logo" width="180">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="home.html">Return to Homepage</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="application.html">Apply for the job</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <h1 class="title-header"><strong>JOB DESCRIPTIONS</strong></h1>
     </header>
-
-    <nav>
-        <a href="home.html">Home</a> <!-- These navigation things are just placeholders for now change them as you please-->
-=======
-    <nav> <!-- Nav Bar that redirects to the other pages-->
-        <a href="home.html">Home</a>
-
-        <a href="about.html">About us</a>
-        <a href="jobs.html">Job Listings</a>
-        <a href="application.html">Apply</a>
-    </nav>
     <main>
         <form id="Application" method="post" action="https://mercury.swin.edu.au/it000000/cos10005/surveytest.php"> <!-- Job Appliation Form -->
             <label>Job Reference Number</label><br>
                 <select name="Job">
                     <option name="Cloud_Engineer" value="1">Cloud Engineer</option>
                     <option name="Software_Developer" value="2">Software Developer</option>
-                    <option name="Client-side_Developer" value="3">Client-side Developer</option>
-                    <option name="Computer_Systems_Specialist" value="4">Computer Systems Specialist</option>
                 </select>
             <br><label>First Name</label>
                 <input type="text" name="fname" size="20">
@@ -67,21 +70,26 @@
             <br><label>Phone Number</label>
                 <input type="number" minlength="8" maxlength="12" name="Phone_Number">
             <br><label>Required Technical list </label>
-                <br><label>Knowledge of computer systems</label>
-                    <input type="checkbox" name="Sys" value="1">
                 <br><label>Ability to develop various software</label>
-                    <input type="checkbox" name="Soft" value="2">
+                    <input type="checkbox" name="Soft" value="1">
                 <br><label>Can desgin cloud based systems</label>
-                    <input type="checkbox" name="Cloud" value="3">
-                <br><label>Can develop and maintain a front end website</label>
-                    <input type="checkbox" name="Web" value="4">
+                    <input type="checkbox" name="Cloud" value="2">
             <br><textarea name="Other Skills"></textarea><br>
             <input type="submit" value="Submit Application" >
             <input type="reset" value="Reset Page" >
         </form>
     </main>
+    <!-- Footer -->
     <footer>
-        <p>help</p>
+        <div class="footer-container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
