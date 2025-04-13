@@ -1,87 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title></title>
+<title>Application Page</title>
 <meta charset="utf-8">
 <meta name="description" content="Job Application Form">
 <meta name="keywords" content="HTML and CSS">
-<meta name="author" content="Jacob, Tom, Pahul, Hung">
-<link href="styles" rel="stylesheet">
+<meta name="author" content="Jacob">
+<link href="styles.css" rel="stylesheet">
 </head>
 <body>
+
     <header>
-        <h1>Job Application</h1>
+        <!-- This part was taken from home.html to match the header of that page -->
+        <div class="header-wrapper">
+            <div class="logo-container">
+                <a href="home.html">
+                    <img src="styles/images/bluewave_it_logo.png" alt="Bluewave IT logo" width="180">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="home.html">Return to Homepage</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="application.html">Apply for the job</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <h2 class="title-header"><strong>JOB APPLICATIONS</strong></h2>
     </header>
 
-    <nav>
-        <a href="home.html">Home</a> <!-- These navigation things are just placeholders for now change them as you please-->
-=======
-    <nav> <!-- Nav Bar that redirects to the other pages-->
-        <a href="home.html">Home</a>
-
-        <a href="about.html">About us</a>
-        <a href="jobs.html">Job Listings</a>
-        <a href="application.html">Apply</a>
-    </nav>
+         <!-- Main banner section -->
+    <section class="banner">
+        <div class="banner-wrapper">
+            <h1>Application Form</h1>
+        </div>
+    </section>
+    <div id="padding">  <!-- Padding for the page adding additional visibility-->
     <main>
+        <div id="card-thing">
+        <article>
         <form id="Application" method="post" action="https://mercury.swin.edu.au/it000000/cos10005/surveytest.php"> <!-- Job Appliation Form -->
-            <label>Job Reference Number</label><br>
+            <label class="labelstyle">Job Reference Number: </label>
                 <select name="Job">
-                    <option name="Cloud_Engineer" value="1">Cloud Engineer</option>
-                    <option name="Software_Developer" value="2">Software Developer</option>
-                    <option name="Client-side_Developer" value="3">Client-side Developer</option>
-                    <option name="Computer_Systems_Specialist" value="4">Computer Systems Specialist</option>
+                    <option id="Cloud_Engineer" value="1">Cloud Engineer</option>
+                    <option id="Software_Developer" value="2">Software Developer</option>
                 </select>
-            <br><label>First Name</label>
+            <br><br><label class="labelstyle">First Name: </label>
                 <input type="text" name="fname" size="20">
-            <br><label>Last Name</label>
+            <br><br><label class="labelstyle">Last Name: </label>
                 <input type="text" name="lname" size="20">
-            <br><label>Date of Birth</label>
+            <br><br><label class="labelstyle">Date of Birth: </label>
                 <input type="date" name="date">
-            <br><label>Gender</label><br>
+            <br><br><label class="labelstyle">Gender: </label>
                 <label>Male: </label>
                     <input type="radio" name="Gender" value="1">
                 <label>Female: </label>
                     <input type="radio" name="Gender" value="2">
                 <label>Other: </label>
                     <input type="radio" name="Gender" value="3">
-            <br><label>Street Address</label>
+            <br><br><label class="labelstyle">Street Address: </label>
                 <input type="text" name="Street" maxlength="40">
-            <br><label>Suburb/Town</label>
+            <br><br><label class="labelstyle">Suburb/Town: </label>
                 <input type="text" name="Suburb" maxlength="40">
-            <br><label>State</label>
+            <br><br><label class="labelstyle">State: </label>
                 <select name="State">
-                    <option name="vic" value="1">Vic</option>
-                    <option name="nsw" value="2">NSW</option>
-                    <option name="qld" value="3">QLD</option>
-                    <option name="nt" value="4">NT</option>
-                    <option name="wa" value="5">WA</option>
-                    <option name="sa" value="6">SA</option>
-                    <option name="tas" value="7">TAS</option>
-                    <option name="act" value="8">ACT</option>
+                    <option id="vic" value="1">Vic</option>
+                    <option id="nsw" value="2">NSW</option>
+                    <option id="qld" value="3">QLD</option>
+                    <option id="nt" value="4">NT</option>
+                    <option id="wa" value="5">WA</option>
+                    <option id="sa" value="6">SA</option>
+                    <option id="tas" value="7">TAS</option>
+                    <option id="act" value="8">ACT</option>
                 </select>
-            <br><label>Postcode</label>
-                <input type="number" minlength="4" maxlength="4" name="Postcode">
-            <br><label>Email Address</label>
+            <br><br><label class="labelstyle">Postcode: </label>
+                <input type="text" minlength="4" maxlength="4" name="Postcode">
+            <br><br><label class="labelstyle">Email Address: </label>
                 <input type="text" name="Email">
-            <br><label>Phone Number</label>
-                <input type="number" minlength="8" maxlength="12" name="Phone_Number">
-            <br><label>Required Technical list </label>
-                <br><label>Knowledge of computer systems</label>
-                    <input type="checkbox" name="Sys" value="1">
+            <br><br><label class="labelstyle">Phone Number: </label>
+                <input type="tel" minlength="8" maxlength="12" name="phone_number">
+            <br><br><label class="labelstyle">Required Technical list: </label>
                 <br><label>Ability to develop various software</label>
-                    <input type="checkbox" name="Soft" value="2">
+                    <input type="checkbox" name="Soft" value="1">
                 <br><label>Can desgin cloud based systems</label>
-                    <input type="checkbox" name="Cloud" value="3">
-                <br><label>Can develop and maintain a front end website</label>
-                    <input type="checkbox" name="Web" value="4">
-            <br><textarea name="Other Skills"></textarea><br>
-            <input type="submit" value="Submit Application" >
+                    <input type="checkbox" name="Cloud" value="2">
+            <br><br><label class="labelstyle">Other Skills: </label><br>
+                <textarea name="Other Skills"></textarea><br>
+            <input type="submit" value="Apply" >
             <input type="reset" value="Reset Page" >
         </form>
+        </article>
+        </div>
     </main>
+    </div>
+    <!-- Footer -->
     <footer>
-        <p>help</p>
+        <div class="footer-container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
