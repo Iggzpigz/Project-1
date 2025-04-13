@@ -428,7 +428,7 @@ footer {
   padding-right: 20%;
   
 }
-#card-thing {
+#card-thing { /* Main article style */
   position: relative;
   background-color: #F7F6F3; /* S4 color */
   border-radius: 20px;
@@ -445,7 +445,7 @@ footer {
   list-style-position: inside;
   padding: 0.5em 0.5em 0.5em 0.5em;
 }
-table {
+table { /* Table styles */
   border: 1px solid black;
   text-align: center;
   margin: auto;
