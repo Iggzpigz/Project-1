@@ -1,19 +1,25 @@
 /*
-filename: project1
+filename: jd-layout.css
 author: tom chu
 created: 8/4/25
-last modified: 12/4/25
-description: job description page layout
+last modified: 13/4/25
+description: job description page css styling
 */
 
-h1, h2, h3 {font-family: Verdana, sans-serif;}
-#avail {color: limegreen}
+html {
+    background-color: #dffafe;
+}
+
+#avail {
+    color: limegreen;
+    font-family: Verdana, sans-serif;
+}
 
 /*
 this part is for styling the code fragment that was taken from home.html
 */
-header {
-    background-color: white;
+.jd-header {
+    background-color: #dffafe;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
 }
@@ -98,6 +104,7 @@ end of header styling
     background-color:#528F99;
     text-align: center;
     color:white;
+    font-family: Verdana, sans-serif;
 }
 
 .availjobs:hover {display:block;}
@@ -138,6 +145,7 @@ aside {
     line-height: 1.25;
     padding: 12px 9px;
     text-align: center;
+    font-family: Verdana, sans-serif
 }
 
 .gen-table-border-color {
@@ -249,6 +257,7 @@ nav ul {
     padding: 6px;
     font-size: 18px;
     overflow: auto;
+    font-family: Verdana, sans-serif;
 }
 
 .bottom-spacing {margin-bottom: 30px;}
@@ -304,7 +313,67 @@ nav ul {
     line-height: 24px;
     font-weight: 700;
     color: #5a616d;
+    font-family: Verdana, sans-serif;
 }
 
 .resp-list {list-style-type: disc;}
 
+footer {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.footer-bg {
+    background-color: #b9dfe4;
+}
+
+footer div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+#footer-margin {
+    margin: auto;
+    max-width: 1150px;
+}
+
+.footer-info-grid {
+    display: grid;
+    column-gap: 2.5rem;
+    row-gap: 0.5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-top: 24px;
+    grid-template-columns: 2.5fr 0.75fr 0.75fr;
+}
+
+.footer-d-flex {display:flex;}
+.footer-margtop-auto {margin-top: auto;}
+
+#footer-bluewave-desc {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: rgb(39, 39, 39);
+    margin-top: 0px;
+}
+
+.footer-site-title {
+    color: #0c2947;
+    line-height: 2em;
+    height: 40px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-links {
+    color: #3a3f44;
+    font-size: 14px;
+    display: block;
+}
+
+#footer-copyright {
+    color: #40474e;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-style: italic;
+}
