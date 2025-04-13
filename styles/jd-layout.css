@@ -126,7 +126,7 @@ aside {
     border-width: 1px;
     border-color: lightgray;
     clear: left;
-    float: left;
+    float: right;
     margin: 0 0 18px 18px;
     width: 270px;
 }
