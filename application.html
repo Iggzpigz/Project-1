@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title></title>
+<title>Application Page</title>
 <meta charset="utf-8">
 <meta name="description" content="Job Application Form">
 <meta name="keywords" content="HTML and CSS">
@@ -9,6 +9,7 @@
 <link href="styles.css" rel="stylesheet">
 </head>
 <body>
+
     <header>
         <!-- This part was taken from home.html to match the header of that page -->
         <div class="header-wrapper">
@@ -26,59 +27,73 @@
             </nav>
         </div>
 
-        <h1 class="title-header"><strong>JOB DESCRIPTIONS</strong></h1>
+        <h2 class="title-header"><strong>JOB APPLICATIONS</strong></h2>
     </header>
+
+         <!-- Main banner section -->
+    <section class="banner">
+        <div class="banner-wrapper">
+            <h1>Application Form</h1>
+        </div>
+    </section>
+    <div id="padding">
     <main>
+        <div id="card-thing">
+        <article>
         <form id="Application" method="post" action="https://mercury.swin.edu.au/it000000/cos10005/surveytest.php"> <!-- Job Appliation Form -->
-            <label>Job Reference Number</label><br>
+            <label class="labelstyle">Job Reference Number: </label>
                 <select name="Job">
-                    <option name="Cloud_Engineer" value="1">Cloud Engineer</option>
-                    <option name="Software_Developer" value="2">Software Developer</option>
+                    <option id="Cloud_Engineer" value="1">Cloud Engineer</option>
+                    <option id="Software_Developer" value="2">Software Developer</option>
                 </select>
-            <br><label>First Name</label>
+            <br><br><label class="labelstyle">First Name: </label>
                 <input type="text" name="fname" size="20">
-            <br><label>Last Name</label>
+            <br><br><label class="labelstyle">Last Name: </label>
                 <input type="text" name="lname" size="20">
-            <br><label>Date of Birth</label>
+            <br><br><label class="labelstyle">Date of Birth: </label>
                 <input type="date" name="date">
-            <br><label>Gender</label><br>
+            <br><br><label class="labelstyle">Gender: </label>
                 <label>Male: </label>
                     <input type="radio" name="Gender" value="1">
                 <label>Female: </label>
                     <input type="radio" name="Gender" value="2">
                 <label>Other: </label>
                     <input type="radio" name="Gender" value="3">
-            <br><label>Street Address</label>
+            <br><br><label class="labelstyle">Street Address: </label>
                 <input type="text" name="Street" maxlength="40">
-            <br><label>Suburb/Town</label>
+            <br><br><label class="labelstyle">Suburb/Town: </label>
                 <input type="text" name="Suburb" maxlength="40">
-            <br><label>State</label>
+            <br><br><label class="labelstyle">State: </label>
                 <select name="State">
-                    <option name="vic" value="1">Vic</option>
-                    <option name="nsw" value="2">NSW</option>
-                    <option name="qld" value="3">QLD</option>
-                    <option name="nt" value="4">NT</option>
-                    <option name="wa" value="5">WA</option>
-                    <option name="sa" value="6">SA</option>
-                    <option name="tas" value="7">TAS</option>
-                    <option name="act" value="8">ACT</option>
+                    <option id="vic" value="1">Vic</option>
+                    <option id="nsw" value="2">NSW</option>
+                    <option id="qld" value="3">QLD</option>
+                    <option id="nt" value="4">NT</option>
+                    <option id="wa" value="5">WA</option>
+                    <option id="sa" value="6">SA</option>
+                    <option id="tas" value="7">TAS</option>
+                    <option id="act" value="8">ACT</option>
                 </select>
-            <br><label>Postcode</label>
-                <input type="number" minlength="4" maxlength="4" name="Postcode">
-            <br><label>Email Address</label>
+            <br><br><label class="labelstyle">Postcode: </label>
+                <input type="text" minlength="4" maxlength="4" name="Postcode">
+            <br><br><label class="labelstyle">Email Address: </label>
                 <input type="text" name="Email">
-            <br><label>Phone Number</label>
-                <input type="number" minlength="8" maxlength="12" name="Phone_Number">
-            <br><label>Required Technical list </label>
+            <br><br><label class="labelstyle">Phone Number: </label>
+                <input type="tel" minlength="8" maxlength="12" name="phone_number">
+            <br><br><label class="labelstyle">Required Technical list: </label>
                 <br><label>Ability to develop various software</label>
                     <input type="checkbox" name="Soft" value="1">
                 <br><label>Can desgin cloud based systems</label>
                     <input type="checkbox" name="Cloud" value="2">
-            <br><textarea name="Other Skills"></textarea><br>
+            <br><br><label class="labelstyle">Other Skills: </label><br>
+                <textarea name="Other Skills"></textarea><br>
             <input type="submit" value="Submit Application" >
             <input type="reset" value="Reset Page" >
         </form>
+        </article>
+        </div>
     </main>
+    </div>
     <!-- Footer -->
     <footer>
         <div class="footer-container">
