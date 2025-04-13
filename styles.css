@@ -58,6 +58,8 @@ header {
 .logo-container {
   display: flex;
   align-items: center;
+  padding: 5px 0;
+  width: 200px;
 }
 
 .logo-container a {
@@ -67,8 +69,9 @@ header {
 }
 
 .logo-container img {
-  height: 50px; /* Increased logo size */
-  margin-right: 0.5rem;
+  height: 60px;
+  width: auto;
+  max-width: 100%;
 }
 
 .logo-container span {
