@@ -426,40 +426,44 @@ footer {
 }
 
 #padding {
-padding-left: 20%;
-padding-right: 20%;
+  padding-left: 20%;
+  padding-right: 20%;
 
 }
 #card-thing { /* Main article style */
-position: relative;
-background-color: #F7F6F3;
-border-radius: 20px;
-padding: 2rem;
-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-overflow: hidden;
+  position: relative;
+  background-color: #F7F6F3;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 #card-thing article {
-float: left;
+  width: 70%;
+  float: left;
 }
 #card-thing aside {
-float: right;
-border: 1px solid black;
-list-style-position: inside;
-padding: 0.5em 0.5em 0.5em 0.5em;
+  float: right;
+  border: 1px solid black;
+  list-style-position: inside;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+}
+#card-thing img {
+  width: 100%;
 }
 article h6{
-color: #F7F6F3;
+  color: #F7F6F3;
 }
 table { /* Table styles */
-border: 1px solid black;
-text-align: center;
-margin: auto;
+  border: 1px solid black;
+  text-align: center;
+  margin: auto;
 }
 td, th {
-border: 1px solid black;
-padding: 0.5em;
+  border: 1px solid black;
+  padding: 0.5em;
 }
 .labelstyle {
-font-size: 1.4em;
-font-weight: bold;
+  font-size: 1.4em;
+  font-weight: bold;
 }
