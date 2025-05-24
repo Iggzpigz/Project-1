@@ -4,10 +4,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit();
 }
 
-// database settings
 include_once("settings.php");
 
-// Initialize variables
 $errors = array();
 $success = false;
 $eoi_number = '';
@@ -20,7 +18,7 @@ function sanitize_input($data) {
     return $data;
 }
 
-// Function to validate date format (dd/mm/yyyy)
+// validate date format
 function validate_date($date) {
     $date_parts = explode('/', $date);
     if (count($date_parts) != 3) return false;
@@ -152,77 +150,70 @@ if (empty($skills)) {
     $errors[] = "At least one technical skill must be selected.";
 }
 
-// Check if "Other" skill is selected but other_skills field is empty
+// Enhancement: Check if "Other" skill is selected but other_skills field is empty
 if (in_array('other', $skills) && empty($other_skills)) {
     $errors[] = "Please specify other skills when 'Other' is selected.";
 }
 
+// Enhancement: Validate that other_skills is not empty when provided
+if (!empty($other_skills) && strlen(trim($other_skills)) < 10) {
+    $errors[] = "Other skills description must be at least 10 characters long.";
+}
+
 // If no errors, proceed with database operations
 if (empty($errors)) {
-    // Create database connection
-    $conn = new mysqli($host, $user, $password);
-    
-    if ($conn->connect_error) {
-        $errors[] = "Connection failed: " . $conn->connect_error;
+    // Check if connection exists from settings.php
+    if (!$conn) {
+        $errors[] = "Database connection failed.";
     } else {
-        // Create database if it doesn't exist
-        $sql = "CREATE DATABASE IF NOT EXISTS $database";
-        if ($conn->query($sql) === TRUE) {
-            $conn->select_db($database);
-            
-            // Create EOI table if it doesn't exist
-            $create_table_sql = "CREATE TABLE IF NOT EXISTS eoi (
-                EOInumber INT AUTO_INCREMENT PRIMARY KEY,
-                job_reference VARCHAR(10) NOT NULL,
-                first_name VARCHAR(20) NOT NULL,
-                last_name VARCHAR(20) NOT NULL,
-                date_of_birth VARCHAR(10) NOT NULL,
-                gender ENUM('Male', 'Female', 'Other') NOT NULL,
-                street_address VARCHAR(40) NOT NULL,
-                suburb VARCHAR(40) NOT NULL,
-                state ENUM('VIC','NSW','QLD','NT','WA','SA','TAS','ACT') NOT NULL,
-                postcode VARCHAR(4) NOT NULL,
-                email VARCHAR(100) NOT NULL,
-                phone_number VARCHAR(12) NOT NULL,
-                skill1 VARCHAR(50),
-                skill2 VARCHAR(50),
-                other_skills TEXT,
-                status ENUM('New', 'Current', 'Final') DEFAULT 'New',
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            )";
-            
-            if ($conn->query($create_table_sql) === TRUE) {
-                // Prepare skills for insertion
-                $skill1 = isset($skills[0]) ? $skills[0] : null;
-                $skill2 = isset($skills[1]) ? $skills[1] : null;
-                
-                // Insert EOI record
-                $insert_sql = "INSERT INTO eoi (job_reference, first_name, last_name, date_of_birth, gender, 
-                                               street_address, suburb, state, postcode, email, phone_number, 
-                                               skill1, skill2, other_skills, status) 
-                               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'New')";
-                
-                $stmt = $conn->prepare($insert_sql);
-                $stmt->bind_param("ssssssssssssss", $job_reference, $first_name, $last_name, $date_of_birth, 
-                                  $gender, $street_address, $suburb, $state, $postcode, $email, $phone_number, 
-                                  $skill1, $skill2, $other_skills);
-                
-                if ($stmt->execute()) {
-                    $eoi_number = $conn->insert_id;
-                    $success = true;
-                } else {
-                    $errors[] = "Error inserting record: " . $stmt->error;
-                }
-                
-                $stmt->close();
-            } else {
-                $errors[] = "Error creating table: " . $conn->error;
-            }
-        } else {
-            $errors[] = "Error creating database: " . $conn->error;
-        }
+        // Create EOI table if it doesn't exist
+        $create_table_sql = "CREATE TABLE IF NOT EXISTS eoi (
+            EOInumber INT AUTO_INCREMENT PRIMARY KEY,
+            job_reference VARCHAR(10) NOT NULL,
+            first_name VARCHAR(20) NOT NULL,
+            last_name VARCHAR(20) NOT NULL,
+            date_of_birth VARCHAR(10) NOT NULL,
+            gender ENUM('Male', 'Female', 'Other') NOT NULL,
+            street_address VARCHAR(40) NOT NULL,
+            suburb VARCHAR(40) NOT NULL,
+            state ENUM('VIC','NSW','QLD','NT','WA','SA','TAS','ACT') NOT NULL,
+            postcode VARCHAR(4) NOT NULL,
+            email VARCHAR(100) NOT NULL,
+            phone_number VARCHAR(12) NOT NULL,
+            skill1 VARCHAR(50),
+            skill2 VARCHAR(50),
+            other_skills TEXT,
+            status ENUM('New', 'Current', 'Final') DEFAULT 'New',
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )";
         
-        $conn->close();
+        if ($conn->query($create_table_sql) === TRUE) {
+            // Prepare skills for insertion
+            $skill1 = isset($skills[0]) ? $skills[0] : null;
+            $skill2 = isset($skills[1]) ? $skills[1] : null;
+            
+            // Insert EOI record
+            $insert_sql = "INSERT INTO eoi (job_reference, first_name, last_name, date_of_birth, gender, 
+                                           street_address, suburb, state, postcode, email, phone_number, 
+                                           skill1, skill2, other_skills, status) 
+                           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'New')";
+            
+            $stmt = $conn->prepare($insert_sql);
+            $stmt->bind_param("ssssssssssssss", $job_reference, $first_name, $last_name, $date_of_birth, 
+                              $gender, $street_address, $suburb, $state, $postcode, $email, $phone_number, 
+                              $skill1, $skill2, $other_skills);
+            
+            if ($stmt->execute()) {
+                $eoi_number = $conn->insert_id;
+                $success = true;
+            } else {
+                $errors[] = "Error inserting record: " . $stmt->error;
+            }
+            
+            $stmt->close();
+        } else {
+            $errors[] = "Error creating table: " . $conn->error;
+        }
     }
 }
 
@@ -268,5 +259,9 @@ include("nav.inc");
 </div>
 
 <?php
+// Close connection
+if (isset($conn)) {
+    $conn->close();
+}
 include("footer.inc");
 ?>
