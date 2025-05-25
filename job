@@ -1,18 +1,19 @@
 <?php
+require_once "settings.php";
 include("header.inc");
-include("footer.inc");
+include("nav.inc");
 # connect to database
 $conn = @mysqli_connect($host, $username, $password, $database);
 
     if ($conn) {
-        $query = "SELECT * FROM expresssions_of_interests";
-        $result = mysqli_query ($dbconn, $query);
+        $query = "SELECT * FROM jobs";
+        $result = mysqli_query ($conn, $query);
         if ($result) {}
         else {}
-        mysqli_close($dbconn);
+        mysqli_close($conn);
     } else echo "<p>Unable to connect to the database.</p>";
-
-
+?>
+<!--
     echo "<table border='1' cellpadding='5'>";
     echo "<tr><th>Job Title</th><th>Job Description</th></tr>";
     while ($row = mysqli_fetch_assoc($result)) {
@@ -21,6 +22,21 @@ $conn = @mysqli_connect($host, $username, $password, $database);
         echo "<td>" . $row['JobDescription'] . "</td>";
         echo "</tr>";
     } 
-
+--> 
+<div id="card-thing">
+    <table>
+        <tr>
+            <td>Job Title</td>
+            <td colspan="2">Job Description</td>
+        </tr>
+        <?php while ($row = mysqli_fetch_assoc($result)) {
+            echo "<tr>";
+            echo "<td>" . $row['Job'] . "</td>";
+            echo "<td colspan'2'>" . $row['JobDescription'] . "</td>";
+            echo "</tr>";
+        }?>
+    </table> 
+</div>
+<?php
 include("footer.inc");
 ?>
