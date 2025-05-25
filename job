@@ -23,19 +23,31 @@ $conn = @mysqli_connect($host, $username, $password, $database);
         echo "</tr>";
     } 
 --> 
-<div id="card-thing">
-    <table>
-        <tr>
-            <td>Job Title</td>
-            <td colspan="2">Job Description</td>
-        </tr>
-        <?php while ($row = mysqli_fetch_assoc($result)) {
-            echo "<tr>";
-            echo "<td>" . $row['Job'] . "</td>";
-            echo "<td colspan'2'>" . $row['JobDescription'] . "</td>";
-            echo "</tr>";
-        }?>
-    </table> 
+<section class="banner">
+    <div class="banner-wrapper">
+        <h1>Jobs Database</h1>
+    </div>
+</section>
+
+<div id="padding">
+    <main>
+        <div id="card-thing">
+            <article>
+                <table>
+                    <tr>
+                        <td>Job Title</td>
+                        <td colspan="2">Job Description</td>
+                    </tr>
+                    <?php while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<tr>";
+                        echo "<td>" . $row['Job'] . "</td>";
+                        echo "<td colspan'2'>" . $row['JobDescription'] . "</td>";
+                        echo "</tr>";
+                    }?>
+                </table> 
+            </article>
+        </div>
+    </main>
 </div>
 <?php
 include("footer.inc");
