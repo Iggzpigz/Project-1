@@ -43,7 +43,7 @@ switch ($action) {
 function listalleoi($conn) {
     $query = "SELECT * FROM expressions_of_interest";
     $result = mysqli_query($conn, $query);
-    $isnull = true;
+    
     
     echo "<h2>All EOIs</h2>";
     echo "<table border='1'>";
