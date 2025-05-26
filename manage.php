@@ -4,7 +4,7 @@
 include('settings.php');
 
 // reminder do not hard-code user and pwd
-$conn = mysqli_connect("localhost", "root", "", "eoi");
+$conn = mysqli_connect("localhost", "root", "", "exhibition_db");
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
@@ -40,7 +40,7 @@ switch ($action) {
 }
 
 function listalleoi($conn) {
-    $query = "SELECT * FROM eoi";
+    $query = "SELECT * FROM expressions_of_interest";
     $result = mysqli_query($conn, $query);
     $isnull = true;
     
@@ -68,7 +68,7 @@ function listbypos($conn) {
     $jobRef = isset($_POST['job_reference']) ? $_POST['job_reference'] : '';
     
     if ($jobRef) {
-        $query = "SELECT * FROM eoi WHERE JobReferenceNumber = '$jobRef'";
+        $query = "SELECT * FROM expressions_of_interest WHERE JobReferenceNumber = '$jobRef'";
         $result = mysqli_query($conn, $query);
         
         echo "<h2>EOIs for Job Reference Number: $jobRef</h2>";
@@ -94,7 +94,7 @@ function listbyapplicant($conn) {
     $lastName = isset($_POST['last_name']) ? $_POST['last_name'] : '';
     
     if ($firstName || $lastName) {
-        $query = "SELECT * FROM eoi WHERE FirstName LIKE '%$firstName%' AND LastName LIKE '%$lastName%'";
+        $query = "SELECT * FROM expressions_of_interest WHERE FirstName LIKE '%$firstName%' AND LastName LIKE '%$lastName%'";
         $result = mysqli_query($conn, $query);
         
         echo "<h2>EOIs for Applicant: $firstName $lastName</h2>";
@@ -119,7 +119,7 @@ function deletebypos($conn) {
     $jobRef = isset($_POST['job_reference_delete']) ? $_POST['job_reference_delete'] : '';
     
     if ($jobRef) {
-        $query = "DELETE FROM eoi WHERE JobReferenceNumber = '$jobRef'";
+        $query = "DELETE FROM expressions_of_interest WHERE JobReferenceNumber = '$jobRef'";
         if (mysqli_query($conn, $query)) {
             echo "<p>All EOIs for Job Reference Number: $jobRef have been deleted.</p>";
         } else {
@@ -135,7 +135,7 @@ function changestatus($conn) {
     $newStatus = isset($_POST['new_status']) ? $_POST['new_status'] : '';
     
     if ($eoiNumber && $newStatus) {
-        $query = "UPDATE eoi SET Status = '$newStatus' WHERE EOInumber = '$eoiNumber'";
+        $query = "UPDATE expressions_of_interest SET Status = '$newStatus' WHERE EOInumber = '$eoiNumber'";
         if (mysqli_query($conn, $query)) {
             echo "<p>Status of EOI #$eoiNumber has been updated to $newStatus.</p>";
         } else {

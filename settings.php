@@ -1,9 +1,10 @@
-//As you have done in the labs use a PHP include file “settings.php” that contains the
-host, user, password and database name connection variables, and use this in your PHP to
-connect to your MySQL database on the local database server.
+
 
 
 <?php
+//As you have done in the labs use a PHP include file “settings.php” that contains the
+//host, user, password and database name connection variables, and use this in your PHP to
+//connect to your MySQL database on the local database server.
 // Database connection settings for XAMPP
 $host = "localhost";
 $username = "root"; 
