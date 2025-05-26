@@ -50,11 +50,11 @@ function listalleoi($conn) {
     echo "<tr><th>EOI Number</th><th>Job Reference Number</th><th>First Name</th><th>Last Name</th><th>Status</th></tr>";
     while ($row = mysqli_fetch_assoc($result)) {
         echo "<tr>
-                <td>{$row['EOInumber']}</td>
-                <td>{$row['JobReferenceNumber']}</td>
-                <td>{$row['FirstName']}</td>
-                <td>{$row['LastName']}</td>
-                <td>{$row['Status']}</td>
+                <td>$row['EOInumber']</td>
+                <td>$row['JobReferenceNumber']</td>
+                <td>$row['FirstName']</td>
+                <td>$row['LastName']</td>
+                <td>$row['Status']</td>
               </tr>";
               $isnull = false;
     }
