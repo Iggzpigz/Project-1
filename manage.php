@@ -50,7 +50,7 @@ function listalleoi($conn) {
     echo "<tr><th>EOI Number</th><th>Job Reference Number</th><th>First Name</th><th>Last Name</th><th>Status</th></tr>";
     while ($row = mysqli_fetch_assoc($result)) {
         echo "<tr>";
-        echo        "<td>" . $row['EOInumber'] . "</td>";
+        echo        "<td>" . $row['EOINumber'] . "</td>";
         echo        "<td>" . $row['JobReferenceNumber'] . "</td>";
         echo        "<td>" . $row['FirstName'] . "</td>";
         echo        "<td>" . $row['LastName'] . "</td>";
