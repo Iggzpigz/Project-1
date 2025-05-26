@@ -60,9 +60,7 @@ function listalleoi($conn) {
     }
     echo "</table>";
 
-    if ($isnull) {
-        echo "<p>No result found.</p>";
-    }
+
 }
 
 function listbypos($conn) {
