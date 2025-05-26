@@ -49,13 +49,13 @@ function listalleoi($conn) {
     echo "<table border='1'>";
     echo "<tr><th>EOI Number</th><th>Job Reference Number</th><th>First Name</th><th>Last Name</th><th>Status</th></tr>";
     while ($row = mysqli_fetch_assoc($result)) {
-        echo "<tr>
-                <td>$row['EOInumber']</td>
-                <td>$row['JobReferenceNumber']</td>
-                <td>$row['FirstName']</td>
-                <td>$row['LastName']</td>
-                <td>$row['Status']</td>
-              </tr>";
+        echo "<tr>";
+        echo        "<td>" . $row['EOInumber'] . "</td>";
+        echo        "<td>" . $row['JobReferenceNumber'] . "</td>";
+        echo        "<td>" . $row['FirstName'] . "</td>";
+        echo        "<td>" . $row['LastName'] . "</td>";
+        echo        "<td>" . $row['Status'] . "</td>";
+        echo      "</tr>";
               $isnull = false;
     }
     echo "</table>";
