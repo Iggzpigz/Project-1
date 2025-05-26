@@ -6,7 +6,7 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$database = "exhibition_db"; 
+$database = "project_part_2"; 
 
 // Create connection
 $conn = @mysqli_connect($host, $username, $password, $database);

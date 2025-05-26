@@ -5,7 +5,7 @@ include('settings.php');
 include('header.inc');
 include('nav.inc');
 // reminder do not hard-code user and pwd
-$conn = mysqli_connect("localhost", "root", "", "exhibition_db");
+$conn = mysqli_connect("localhost", "root", "", "project_part_2");
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
