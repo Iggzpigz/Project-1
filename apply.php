@@ -1,5 +1,4 @@
 <?php
-// Set page-specific variables
 $title = "Application Page";
 $description = "Job Application Form";
 $author = "Jacob";
