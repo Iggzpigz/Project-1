@@ -13,7 +13,7 @@ if (!$conn) {
 
 // checks to see if forms are submitted or not
 $action = isset($_GET['action']) ? $_GET['action'] : '';
-
+echo "<p>testing action = $action</p>";
 switch ($action) {
     case 'list_all':
         listalleoi($conn);
