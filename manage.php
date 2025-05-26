@@ -2,7 +2,8 @@
 // settings.php should be included for database credentials
 // but theres nothing there rn, FIX THIS LATER FUTURE ME
 include('settings.php');
-
+include('header.inc');
+include('nav.inc');
 // reminder do not hard-code user and pwd
 $conn = mysqli_connect("localhost", "root", "", "exhibition_db");
 
@@ -184,5 +185,5 @@ function displayForm() {
             <button type='submit'>Change Status</button>
           </form>";
 }
-
+include("footer.inc");
 ?>
