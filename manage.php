@@ -153,26 +153,26 @@ function displayForm() {
           </form>";
 
     echo "<h2>List EOIs for a Job Position</h2>";
-    echo "<form action='manage.php?action=list_by_position' method='post'>
+    echo "<form action='manage.php?action=list_by_position' method='get'>
             Job Reference Number: <input type='text' name='job_reference' required>
             <button type='submit'>List EOIs</button>
           </form>";
 
     echo "<h2>List EOIs for an Applicant</h2>";
-    echo "<form action='manage.php?action=list_by_applicant' method='post'>
+    echo "<form action='manage.php?action=list_by_applicant' method='get'>
             First Name: <input type='text' name='first_name'>
             Last Name: <input type='text' name='last_name'>
             <button type='submit'>List EOIs</button>
           </form>";
 
     echo "<h2>Delete EOIs for a Job Position</h2>";
-    echo "<form action='manage.php?action=delete_by_position' method='post'>
+    echo "<form action='manage.php?action=delete_by_position' method='get'>
             Job Reference Number: <input type='text' name='job_reference_delete' required>
             <button type='submit'>Delete EOIs</button>
           </form>";
 
     echo "<h2>Change EOI Status</h2>";
-    echo "<form action='manage.php?action=change_status' method='post'>
+    echo "<form action='manage.php?action=change_status' method='get'>
             EOI Number: <input type='text' name='eoi_number' required>
             New Status: 
             <select name='new_status'>
