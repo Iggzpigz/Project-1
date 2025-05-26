@@ -75,7 +75,7 @@ function listbypos($conn) {
         echo "<tr><th>EOI Number</th><th>Job Reference Number</th><th>First Name</th><th>Last Name</th><th>Status</th></tr>";
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>
-                    <td>{$row['EOInumber']}</td>
+                    <td>{$row['EOINumber']}</td>
                     <td>{$row['JobReferenceNumber']}</td>
                     <td>{$row['FirstName']}</td>
                     <td>{$row['LastName']}</td>
@@ -101,7 +101,7 @@ function listbyapplicant($conn) {
         echo "<tr><th>EOI Number</th><th>Job Reference Number</th><th>First Name</th><th>Last Name</th><th>Status</th></tr>";
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>
-                    <td>{$row['EOInumber']}</td>
+                    <td>{$row['EOINumber']}</td>
                     <td>{$row['JobReferenceNumber']}</td>
                     <td>{$row['FirstName']}</td>
                     <td>{$row['LastName']}</td>
