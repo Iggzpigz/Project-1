@@ -1,7 +1,7 @@
 <?php
 $title = "About us";
 $description = "About the authors";
-$author = "Hung";
+$author = "Jacob";
 
 // Include header
 include("header.inc");
