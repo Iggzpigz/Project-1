@@ -1,7 +1,7 @@
 <?php
 $title = "Application Page";
 $description = "Job Application Form";
-$author = "Jacob";
+$author = "Hung";
 
 // Include header
 include("header.inc");
