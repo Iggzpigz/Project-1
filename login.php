@@ -5,8 +5,8 @@ session_start();
 $conn = mysqli_connect("localhost", "root", "", "user");
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
-    $username = mysqli_real_escape_string($conn, $_POST['username']);
-    $password = mysqli_real_escape_string($conn, $_POST['password']);
+    $username = mysqli_real_escape_string($conn, $_POST['Manager']);
+    $password = mysqli_real_escape_string($conn, $_POST['ManagerPassword']);
 
     $query = "SELECT * FROM user WHERE username='$username' AND password='$password'";
     $result = mysqli_query($conn, $query);
