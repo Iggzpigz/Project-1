@@ -1,7 +1,7 @@
 <?php
 $title = "Project Enhancements";
 $description = "Documented enhancements for Bluewave IT project";
-$author = "Jacob";
+$author = "Hung";
 
 // Include header
 include("header.inc");
