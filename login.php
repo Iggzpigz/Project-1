@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+require_once("settings.php");
 
 $conn = mysqli_connect("localhost", "root", "", "project_part_2");
 
