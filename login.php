@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-require_once("settings.php");
 
 $conn = mysqli_connect("localhost", "root", "", "project_part_2");
 
@@ -11,10 +10,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
     $query = "SELECT * FROM user WHERE username='$username' AND password='$password'";
     $result = mysqli_query($conn, $query);
-    $user = mysqli_fetch_assoc($result);
     
-    if ($user) {
-        $_SESSION['username'] = $user['username'];
+    if (mysqli_num_rows($result) == 1) {
+        $_SESSION['username'] = $username;
         header("Location: manage.php");
         exit();
     } else {
