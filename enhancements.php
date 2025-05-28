@@ -34,7 +34,7 @@ $author = "Jacob";
         <div id="card-thing">
             <article>
                 <h2>Implemented Enhancements for Task 8</h2>
-                <p><strong>Developer:</strong> Jacob (105900985)</p>
+                <p><strong>Developer:</strong> Hung (105074314)</p>
                 <p><strong>Assignment:</strong> COS10026 Web Technology Project Part 2</p>
                 
                 <div style="background-color: #DAEFE6; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
