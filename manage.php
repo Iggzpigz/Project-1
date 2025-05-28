@@ -11,6 +11,12 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+// if not logged in
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
+
 // checks to see if forms are submitted or not
 $action = isset($_GET['action']) ? $_GET['action'] : '';
 echo "<p>testing action = $action</p>";
