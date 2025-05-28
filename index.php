@@ -1,7 +1,7 @@
 <?php
 $title = "Bluewave IT - Cloud Engineer Job";
 $description = "Home page";
-$author = "Jacob, Tom, Hung";
+$author = "Hung";
 
 include("header.inc");
 include("nav.inc");
