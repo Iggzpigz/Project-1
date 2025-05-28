@@ -20,9 +20,7 @@ $title = "Project Enhancements";
 $description = "Documented enhancements for Bluewave IT project";
 $author = "Jacob";
 
-// Include header
-include("header.inc");
-include("nav.inc");
+
 ?>
 
 <section class="banner">
