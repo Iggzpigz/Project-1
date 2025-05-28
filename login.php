@@ -1,7 +1,8 @@
 <?php
 
 session_start();
-
+include("header.inc");
+include("nav.inc");
 $conn = mysqli_connect("localhost", "root", "", "project_part_2");
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
@@ -29,3 +30,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     <input type="password" name="password" required><br><br>
     <input type="submit" value="Login">
 </form>
+<?php
+include("footer.inc");
+
+?>
