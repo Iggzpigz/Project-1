@@ -1,6 +1,7 @@
 <?php
 // settings.php should be included for database credentials
 // but theres nothing there rn, FIX THIS LATER FUTURE ME
+session_start()
 include('settings.php');
 include('header.inc');
 include('nav.inc');
