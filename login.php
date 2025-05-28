@@ -2,7 +2,7 @@
 
 session_start();
 
-$conn = mysqli_connect("localhost", "root", "", "user");
+$conn = mysqli_connect("localhost", "root", "", "project_part_2");
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
     $username = mysqli_real_escape_string($conn, $_POST['username']);
