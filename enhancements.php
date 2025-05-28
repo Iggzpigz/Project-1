@@ -23,11 +23,7 @@ $author = "Jacob";
 
 ?>
 
-<section class="banner">
-    <div class="banner-wrapper">
-        <h1>Project Enhancements</h1>
-    </div>
-</section>
+
 
 <div id="padding">
     <main>
